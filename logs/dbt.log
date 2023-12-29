@@ -1,0 +1,331 @@
+[0m15:55:22.922068 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103d2a590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105fb7520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105fb7c70>]}
+
+
+============================== 15:55:22.930224 | 23acd2df-fed9-4df2-aa0d-e1cadbc4c0c2 ==============================
+[0m15:55:22.930224 [info ] [MainThread]: Running with dbt=1.7.4
+[0m15:55:22.930912 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/Users/chloe.tarris/.dbt', 'log_path': 'logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt init jaffle-shop', 'send_anonymous_usage_stats': 'True'}
+[0m15:55:22.931658 [warn ] [MainThread]: [ConfigFolderDirectory]: Unable to parse dict {'dir': PosixPath('/Users/chloe.tarris/.dbt')}
+[0m15:55:22.932098 [info ] [MainThread]: Creating dbt configuration folder at 
+[0m15:55:39.822309 [debug] [MainThread]: Starter project path: /Users/chloe.tarris/PycharmProjects/dbtjaffleshop/venv/lib/python3.10/site-packages/dbt/include/starter_project
+[0m15:55:39.864642 [info ] [MainThread]: 
+Your new dbt project "jaffle_shop" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m15:55:39.865299 [info ] [MainThread]: Setting up your profile.
+[0m15:56:41.417647 [info ] [MainThread]: Profile jaffle_shop written to /Users/chloe.tarris/.dbt/profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m15:56:41.461050 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 78.72364, "process_user_time": 2.04912, "process_kernel_time": 0.288786, "process_mem_max_rss": "96575488", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m15:56:41.461824 [debug] [MainThread]: Command `dbt init` succeeded at 15:56:41.461643 after 78.72 seconds
+[0m15:56:41.462316 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x103d2a590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106073c40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105fb78b0>]}
+[0m15:56:41.462818 [debug] [MainThread]: Flushing usage events
+[0m16:06:25.232041 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f6f94e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111a87fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111a87700>]}
+
+
+============================== 16:06:25.245172 | 987f1bc0-8e56-4177-bb82-1ca575fa8964 ==============================
+[0m16:06:25.245172 [info ] [MainThread]: Running with dbt=1.7.4
+[0m16:06:25.246207 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/Users/chloe.tarris/.dbt', 'log_path': 'logs', 'debug': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt debug', 'send_anonymous_usage_stats': 'True'}
+[0m16:06:25.247365 [info ] [MainThread]: dbt version: 1.7.4
+[0m16:06:25.247956 [info ] [MainThread]: python version: 3.10.0
+[0m16:06:25.248470 [info ] [MainThread]: python path: /Users/chloe.tarris/PycharmProjects/dbtjaffleshop/venv/bin/python
+[0m16:06:25.248955 [info ] [MainThread]: os info: macOS-14.2-x86_64-i386-64bit
+[0m16:06:25.386976 [info ] [MainThread]: Using profiles dir at /Users/chloe.tarris/.dbt
+[0m16:06:25.387567 [info ] [MainThread]: Using profiles.yml file at /Users/chloe.tarris/.dbt/profiles.yml
+[0m16:06:25.388021 [info ] [MainThread]: Using dbt_project.yml file at /Users/chloe.tarris/PycharmProjects/dbtjaffleshop/dbt_project.yml
+[0m16:06:25.391649 [info ] [MainThread]: adapter type: postgres
+[0m16:06:25.392252 [info ] [MainThread]: adapter version: 1.7.4
+[0m16:06:25.392814 [info ] [MainThread]: Configuration:
+[0m16:06:25.393278 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:06:25.393708 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m16:06:25.394130 [info ] [MainThread]: Required dependencies:
+[0m16:06:25.394898 [debug] [MainThread]: Executing "git --help"
+[0m16:06:25.429009 [debug] [MainThread]: STDOUT: "b"usage : git [--version] [-h | --help] [-C <chemin>] [-c <nom>=<valeur>]\n           [--exec-path[=<chemin>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<chemin>] [--work-tree=<chemin>] [--namespace=<nom>]\n           [--super-prefix=<chemin>] [--config-env=<nom>=<variable-d-environnement>]\n           <commande> [<args>]\n\nCi-dessous les commandes Git habituelles dans diverses situations\xc2\xa0:\n\nd\xc3\xa9marrer une zone de travail (voir aussi\xc2\xa0: git help tutorial)\n   clone     Cloner un d\xc3\xa9p\xc3\xb4t dans un nouveau r\xc3\xa9pertoire\n   init      Cr\xc3\xa9er un d\xc3\xa9p\xc3\xb4t Git vide ou r\xc3\xa9initialiser un existant\n\ntravailler sur la modification actuelle (voir aussi\xc2\xa0: git help revisions)\n   add       Ajouter le contenu de fichiers dans l'index\n   mv        D\xc3\xa9placer ou renommer un fichier, un r\xc3\xa9pertoire, ou un lien symbolique\n   restore   Restaurer les fichiers l'arbre de travail\n   rm        Supprimer des fichiers de la copie de travail et de l'index\n\nexaminer l'historique et l'\xc3\xa9tat (voir aussi\xc2\xa0: git help revisions)\n   bisect    Trouver par recherche binaire la modification qui a introduit un bogue\n   diff      Afficher les changements entre les validations, entre validation et copie de travail, etc\n   grep      Afficher les lignes correspondant \xc3\xa0 un motif\n   log       Afficher l'historique des validations\n   show      Afficher diff\xc3\xa9rents types d'objets\n   status    Afficher l'\xc3\xa9tat de la copie de travail\n\nagrandir, marquer et modifier votre historique\n   branch    Lister, cr\xc3\xa9er ou supprimer des branches\n   commit    Enregistrer les modifications dans le d\xc3\xa9p\xc3\xb4t\n   merge     Fusionner deux ou plusieurs historiques de d\xc3\xa9veloppement ensemble\n   rebase    R\xc3\xa9application des commits sur le sommet de l'autre base\n   reset     R\xc3\xa9initialiser la HEAD courante \xc3\xa0 l'\xc3\xa9tat sp\xc3\xa9cifi\xc3\xa9\n   switch    Basculer de branche\n   tag       Cr\xc3\xa9er, lister, supprimer ou v\xc3\xa9rifier un objet d'\xc3\xa9tiquette sign\xc3\xa9 avec GPG\n\ncollaborer (voir aussi\xc2\xa0: git help workflows)\n   fetch     T\xc3\xa9l\xc3\xa9charger les objets et r\xc3\xa9f\xc3\xa9rences depuis un autre d\xc3\xa9p\xc3\xb4t\n   pull      Rapatrier et int\xc3\xa9grer un autre d\xc3\xa9p\xc3\xb4t ou une branche locale\n   push      Mettre \xc3\xa0 jour les r\xc3\xa9f\xc3\xa9rences distantes ainsi que les objets associ\xc3\xa9s\n\n'git help -a' et 'git help -g' listent les sous-commandes disponibles et\nquelques concepts. Voir 'git help <commande>' ou 'git help <concept>'\npour en lire plus \xc3\xa0 propos d'une commande sp\xc3\xa9cifique ou d'un concept.\nVoir 'git help git' pour un survol du syst\xc3\xa8me.\n""
+[0m16:06:25.430174 [debug] [MainThread]: STDERR: "b''"
+[0m16:06:25.430761 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:06:25.431413 [info ] [MainThread]: Connection:
+[0m16:06:25.432043 [info ] [MainThread]:   host: jaffle_shop
+[0m16:06:25.432563 [info ] [MainThread]:   port: 5432
+[0m16:06:25.433038 [info ] [MainThread]:   user: chloetarris
+[0m16:06:25.433523 [info ] [MainThread]:   database: jaffle_shop
+[0m16:06:25.433983 [info ] [MainThread]:   schema: jaffle_shop
+[0m16:06:25.434441 [info ] [MainThread]:   connect_timeout: 10
+[0m16:06:25.434904 [info ] [MainThread]:   role: None
+[0m16:06:25.435393 [info ] [MainThread]:   search_path: None
+[0m16:06:25.435857 [info ] [MainThread]:   keepalives_idle: 0
+[0m16:06:25.436310 [info ] [MainThread]:   sslmode: None
+[0m16:06:25.436749 [info ] [MainThread]:   sslcert: None
+[0m16:06:25.437191 [info ] [MainThread]:   sslkey: None
+[0m16:06:25.437631 [info ] [MainThread]:   sslrootcert: None
+[0m16:06:25.438074 [info ] [MainThread]:   application_name: dbt
+[0m16:06:25.438519 [info ] [MainThread]:   retries: 1
+[0m16:06:25.439203 [info ] [MainThread]: Registered adapter: postgres=1.7.4
+[0m16:06:25.454454 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m16:06:25.455846 [debug] [MainThread]: Using postgres connection "debug"
+[0m16:06:25.456344 [debug] [MainThread]: On debug: select 1 as id
+[0m16:06:25.456797 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:06:25.501851 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+could not translate host name "jaffle_shop" to address: nodename nor servname provided, or not known
+
+[0m16:06:25.507681 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m16:06:25.508161 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m16:06:25.508654 [debug] [MainThread]: On debug: No close available on handle
+[0m16:06:25.509139 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m16:06:25.509630 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m16:06:25.510063 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/chloe.tarris/PycharmProjects/dbtjaffleshop/dbt_project.yml> not found
+
+[0m16:06:25.510515 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  could not translate host name "jaffle_shop" to address: nodename nor servname provided, or not known
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m16:06:25.512906 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.4121235, "process_user_time": 2.293918, "process_kernel_time": 0.34922, "process_mem_max_rss": "97656832", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m16:06:25.513671 [debug] [MainThread]: Command `dbt debug` failed at 16:06:25.513493 after 0.41 seconds
+[0m16:06:25.514180 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:06:25.514698 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10f6f94e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111de4cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111de6920>]}
+[0m16:06:25.515272 [debug] [MainThread]: Flushing usage events
+[0m16:12:49.980364 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1047254e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106aeffd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106aef700>]}
+
+
+============================== 16:12:49.992479 | db47aa89-44fb-417e-a7ff-c8aeef22e732 ==============================
+[0m16:12:49.992479 [info ] [MainThread]: Running with dbt=1.7.4
+[0m16:12:49.993168 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/chloe.tarris/.dbt', 'version_check': 'True', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m16:12:49.993964 [info ] [MainThread]: dbt version: 1.7.4
+[0m16:12:49.994411 [info ] [MainThread]: python version: 3.10.0
+[0m16:12:49.994837 [info ] [MainThread]: python path: /Users/chloe.tarris/PycharmProjects/dbtjaffleshop/venv/bin/python
+[0m16:12:49.995258 [info ] [MainThread]: os info: macOS-14.2-x86_64-i386-64bit
+[0m16:12:50.212806 [info ] [MainThread]: Using profiles dir at /Users/chloe.tarris/.dbt
+[0m16:12:50.213355 [info ] [MainThread]: Using profiles.yml file at /Users/chloe.tarris/.dbt/profiles.yml
+[0m16:12:50.213738 [info ] [MainThread]: Using dbt_project.yml file at /Users/chloe.tarris/PycharmProjects/dbtjaffleshop/dbt_project.yml
+[0m16:12:50.216782 [info ] [MainThread]: adapter type: postgres
+[0m16:12:50.217205 [info ] [MainThread]: adapter version: 1.7.4
+[0m16:12:50.217604 [info ] [MainThread]: Configuration:
+[0m16:12:50.217976 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:12:50.218341 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m16:12:50.218705 [info ] [MainThread]: Required dependencies:
+[0m16:12:50.219307 [debug] [MainThread]: Executing "git --help"
+[0m16:12:50.248854 [debug] [MainThread]: STDOUT: "b"usage : git [--version] [-h | --help] [-C <chemin>] [-c <nom>=<valeur>]\n           [--exec-path[=<chemin>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<chemin>] [--work-tree=<chemin>] [--namespace=<nom>]\n           [--super-prefix=<chemin>] [--config-env=<nom>=<variable-d-environnement>]\n           <commande> [<args>]\n\nCi-dessous les commandes Git habituelles dans diverses situations\xc2\xa0:\n\nd\xc3\xa9marrer une zone de travail (voir aussi\xc2\xa0: git help tutorial)\n   clone     Cloner un d\xc3\xa9p\xc3\xb4t dans un nouveau r\xc3\xa9pertoire\n   init      Cr\xc3\xa9er un d\xc3\xa9p\xc3\xb4t Git vide ou r\xc3\xa9initialiser un existant\n\ntravailler sur la modification actuelle (voir aussi\xc2\xa0: git help revisions)\n   add       Ajouter le contenu de fichiers dans l'index\n   mv        D\xc3\xa9placer ou renommer un fichier, un r\xc3\xa9pertoire, ou un lien symbolique\n   restore   Restaurer les fichiers l'arbre de travail\n   rm        Supprimer des fichiers de la copie de travail et de l'index\n\nexaminer l'historique et l'\xc3\xa9tat (voir aussi\xc2\xa0: git help revisions)\n   bisect    Trouver par recherche binaire la modification qui a introduit un bogue\n   diff      Afficher les changements entre les validations, entre validation et copie de travail, etc\n   grep      Afficher les lignes correspondant \xc3\xa0 un motif\n   log       Afficher l'historique des validations\n   show      Afficher diff\xc3\xa9rents types d'objets\n   status    Afficher l'\xc3\xa9tat de la copie de travail\n\nagrandir, marquer et modifier votre historique\n   branch    Lister, cr\xc3\xa9er ou supprimer des branches\n   commit    Enregistrer les modifications dans le d\xc3\xa9p\xc3\xb4t\n   merge     Fusionner deux ou plusieurs historiques de d\xc3\xa9veloppement ensemble\n   rebase    R\xc3\xa9application des commits sur le sommet de l'autre base\n   reset     R\xc3\xa9initialiser la HEAD courante \xc3\xa0 l'\xc3\xa9tat sp\xc3\xa9cifi\xc3\xa9\n   switch    Basculer de branche\n   tag       Cr\xc3\xa9er, lister, supprimer ou v\xc3\xa9rifier un objet d'\xc3\xa9tiquette sign\xc3\xa9 avec GPG\n\ncollaborer (voir aussi\xc2\xa0: git help workflows)\n   fetch     T\xc3\xa9l\xc3\xa9charger les objets et r\xc3\xa9f\xc3\xa9rences depuis un autre d\xc3\xa9p\xc3\xb4t\n   pull      Rapatrier et int\xc3\xa9grer un autre d\xc3\xa9p\xc3\xb4t ou une branche locale\n   push      Mettre \xc3\xa0 jour les r\xc3\xa9f\xc3\xa9rences distantes ainsi que les objets associ\xc3\xa9s\n\n'git help -a' et 'git help -g' listent les sous-commandes disponibles et\nquelques concepts. Voir 'git help <commande>' ou 'git help <concept>'\npour en lire plus \xc3\xa0 propos d'une commande sp\xc3\xa9cifique ou d'un concept.\nVoir 'git help git' pour un survol du syst\xc3\xa8me.\n""
+[0m16:12:50.249865 [debug] [MainThread]: STDERR: "b''"
+[0m16:12:50.250392 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:12:50.250872 [info ] [MainThread]: Connection:
+[0m16:12:50.251387 [info ] [MainThread]:   host: jaffle_shop
+[0m16:12:50.251822 [info ] [MainThread]:   port: 5432
+[0m16:12:50.252242 [info ] [MainThread]:   user: chloetarris
+[0m16:12:50.252661 [info ] [MainThread]:   database: jaffle_shop
+[0m16:12:50.253080 [info ] [MainThread]:   schema: jaffle_shop
+[0m16:12:50.253496 [info ] [MainThread]:   connect_timeout: 10
+[0m16:12:50.253910 [info ] [MainThread]:   role: None
+[0m16:12:50.254328 [info ] [MainThread]:   search_path: None
+[0m16:12:50.254742 [info ] [MainThread]:   keepalives_idle: 0
+[0m16:12:50.255155 [info ] [MainThread]:   sslmode: None
+[0m16:12:50.255567 [info ] [MainThread]:   sslcert: None
+[0m16:12:50.255979 [info ] [MainThread]:   sslkey: None
+[0m16:12:50.256395 [info ] [MainThread]:   sslrootcert: None
+[0m16:12:50.256811 [info ] [MainThread]:   application_name: dbt
+[0m16:12:50.257222 [info ] [MainThread]:   retries: 1
+[0m16:12:50.257857 [info ] [MainThread]: Registered adapter: postgres=1.7.4
+[0m16:12:50.275356 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m16:12:50.277929 [debug] [MainThread]: Using postgres connection "debug"
+[0m16:12:50.278634 [debug] [MainThread]: On debug: select 1 as id
+[0m16:12:50.279109 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:12:50.316375 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+could not translate host name "jaffle_shop" to address: nodename nor servname provided, or not known
+
+[0m16:12:50.322923 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m16:12:50.323405 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m16:12:50.323864 [debug] [MainThread]: On debug: No close available on handle
+[0m16:12:50.324378 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m16:12:50.324866 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m16:12:50.325301 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/chloe.tarris/PycharmProjects/dbtjaffleshop/dbt_project.yml> not found
+
+[0m16:12:50.325748 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  could not translate host name "jaffle_shop" to address: nodename nor servname provided, or not known
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m16:12:50.334146 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.47691378, "process_user_time": 2.304063, "process_kernel_time": 0.349777, "process_mem_max_rss": "98893824", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m16:12:50.335013 [debug] [MainThread]: Command `dbt debug` failed at 16:12:50.334823 after 0.48 seconds
+[0m16:12:50.335533 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:12:50.336050 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1047254e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ed0cd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106ed2920>]}
+[0m16:12:50.336652 [debug] [MainThread]: Flushing usage events
+[0m16:14:06.247370 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110832290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112ca3b50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112ca3700>]}
+
+
+============================== 16:14:06.252558 | 5ec519ae-7160-423b-a507-eaca8f311977 ==============================
+[0m16:14:06.252558 [info ] [MainThread]: Running with dbt=1.7.4
+[0m16:14:06.253252 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'version_check': 'True', 'log_path': 'logs', 'profiles_dir': '/Users/chloe.tarris/.dbt', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m16:14:06.254034 [info ] [MainThread]: dbt version: 1.7.4
+[0m16:14:06.254474 [info ] [MainThread]: python version: 3.10.0
+[0m16:14:06.254898 [info ] [MainThread]: python path: /Users/chloe.tarris/PycharmProjects/dbtjaffleshop/venv/bin/python
+[0m16:14:06.255321 [info ] [MainThread]: os info: macOS-14.2-x86_64-i386-64bit
+[0m16:14:06.369724 [info ] [MainThread]: Using profiles dir at /Users/chloe.tarris/.dbt
+[0m16:14:06.370235 [info ] [MainThread]: Using profiles.yml file at /Users/chloe.tarris/.dbt/profiles.yml
+[0m16:14:06.370632 [info ] [MainThread]: Using dbt_project.yml file at /Users/chloe.tarris/PycharmProjects/dbtjaffleshop/dbt_project.yml
+[0m16:14:06.371563 [info ] [MainThread]: adapter type: postgres
+[0m16:14:06.371982 [info ] [MainThread]: adapter version: 1.7.4
+[0m16:14:06.372392 [info ] [MainThread]: Configuration:
+[0m16:14:06.372780 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:14:06.373163 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m16:14:06.373544 [info ] [MainThread]: Required dependencies:
+[0m16:14:06.374200 [debug] [MainThread]: Executing "git --help"
+[0m16:14:06.401886 [debug] [MainThread]: STDOUT: "b"usage : git [--version] [-h | --help] [-C <chemin>] [-c <nom>=<valeur>]\n           [--exec-path[=<chemin>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<chemin>] [--work-tree=<chemin>] [--namespace=<nom>]\n           [--super-prefix=<chemin>] [--config-env=<nom>=<variable-d-environnement>]\n           <commande> [<args>]\n\nCi-dessous les commandes Git habituelles dans diverses situations\xc2\xa0:\n\nd\xc3\xa9marrer une zone de travail (voir aussi\xc2\xa0: git help tutorial)\n   clone     Cloner un d\xc3\xa9p\xc3\xb4t dans un nouveau r\xc3\xa9pertoire\n   init      Cr\xc3\xa9er un d\xc3\xa9p\xc3\xb4t Git vide ou r\xc3\xa9initialiser un existant\n\ntravailler sur la modification actuelle (voir aussi\xc2\xa0: git help revisions)\n   add       Ajouter le contenu de fichiers dans l'index\n   mv        D\xc3\xa9placer ou renommer un fichier, un r\xc3\xa9pertoire, ou un lien symbolique\n   restore   Restaurer les fichiers l'arbre de travail\n   rm        Supprimer des fichiers de la copie de travail et de l'index\n\nexaminer l'historique et l'\xc3\xa9tat (voir aussi\xc2\xa0: git help revisions)\n   bisect    Trouver par recherche binaire la modification qui a introduit un bogue\n   diff      Afficher les changements entre les validations, entre validation et copie de travail, etc\n   grep      Afficher les lignes correspondant \xc3\xa0 un motif\n   log       Afficher l'historique des validations\n   show      Afficher diff\xc3\xa9rents types d'objets\n   status    Afficher l'\xc3\xa9tat de la copie de travail\n\nagrandir, marquer et modifier votre historique\n   branch    Lister, cr\xc3\xa9er ou supprimer des branches\n   commit    Enregistrer les modifications dans le d\xc3\xa9p\xc3\xb4t\n   merge     Fusionner deux ou plusieurs historiques de d\xc3\xa9veloppement ensemble\n   rebase    R\xc3\xa9application des commits sur le sommet de l'autre base\n   reset     R\xc3\xa9initialiser la HEAD courante \xc3\xa0 l'\xc3\xa9tat sp\xc3\xa9cifi\xc3\xa9\n   switch    Basculer de branche\n   tag       Cr\xc3\xa9er, lister, supprimer ou v\xc3\xa9rifier un objet d'\xc3\xa9tiquette sign\xc3\xa9 avec GPG\n\ncollaborer (voir aussi\xc2\xa0: git help workflows)\n   fetch     T\xc3\xa9l\xc3\xa9charger les objets et r\xc3\xa9f\xc3\xa9rences depuis un autre d\xc3\xa9p\xc3\xb4t\n   pull      Rapatrier et int\xc3\xa9grer un autre d\xc3\xa9p\xc3\xb4t ou une branche locale\n   push      Mettre \xc3\xa0 jour les r\xc3\xa9f\xc3\xa9rences distantes ainsi que les objets associ\xc3\xa9s\n\n'git help -a' et 'git help -g' listent les sous-commandes disponibles et\nquelques concepts. Voir 'git help <commande>' ou 'git help <concept>'\npour en lire plus \xc3\xa0 propos d'une commande sp\xc3\xa9cifique ou d'un concept.\nVoir 'git help git' pour un survol du syst\xc3\xa8me.\n""
+[0m16:14:06.403206 [debug] [MainThread]: STDERR: "b''"
+[0m16:14:06.403831 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:14:06.404326 [info ] [MainThread]: Connection:
+[0m16:14:06.404847 [info ] [MainThread]:   host: jaffle_shop
+[0m16:14:06.405285 [info ] [MainThread]:   port: 5432
+[0m16:14:06.405708 [info ] [MainThread]:   user: chloetarris
+[0m16:14:06.406133 [info ] [MainThread]:   database: jaffle_shop
+[0m16:14:06.406555 [info ] [MainThread]:   schema: jaffle_shop
+[0m16:14:06.406978 [info ] [MainThread]:   connect_timeout: 10
+[0m16:14:06.407399 [info ] [MainThread]:   role: None
+[0m16:14:06.407816 [info ] [MainThread]:   search_path: None
+[0m16:14:06.408244 [info ] [MainThread]:   keepalives_idle: 0
+[0m16:14:06.408676 [info ] [MainThread]:   sslmode: None
+[0m16:14:06.409124 [info ] [MainThread]:   sslcert: None
+[0m16:14:06.409572 [info ] [MainThread]:   sslkey: None
+[0m16:14:06.410003 [info ] [MainThread]:   sslrootcert: None
+[0m16:14:06.410430 [info ] [MainThread]:   application_name: dbt
+[0m16:14:06.410846 [info ] [MainThread]:   retries: 1
+[0m16:14:06.411563 [info ] [MainThread]: Registered adapter: postgres=1.7.4
+[0m16:14:06.420966 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m16:14:06.423219 [debug] [MainThread]: Using postgres connection "debug"
+[0m16:14:06.424244 [debug] [MainThread]: On debug: select 1 as id
+[0m16:14:06.424806 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:14:06.439457 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+could not translate host name "jaffle_shop" to address: nodename nor servname provided, or not known
+
+[0m16:14:06.450067 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m16:14:06.450675 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m16:14:06.451311 [debug] [MainThread]: On debug: No close available on handle
+[0m16:14:06.451935 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m16:14:06.452528 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m16:14:06.453049 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/chloe.tarris/PycharmProjects/dbtjaffleshop/dbt_project.yml> not found
+
+[0m16:14:06.453588 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  could not translate host name "jaffle_shop" to address: nodename nor servname provided, or not known
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m16:14:06.456364 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.30364212, "process_user_time": 2.217816, "process_kernel_time": 0.312079, "process_mem_max_rss": "98586624", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m16:14:06.457215 [debug] [MainThread]: Command `dbt debug` failed at 16:14:06.457014 after 0.30 seconds
+[0m16:14:06.457775 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:14:06.458354 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110832290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112ff0d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112ff0b20>]}
+[0m16:14:06.458998 [debug] [MainThread]: Flushing usage events
+[0m16:19:24.640098 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110226290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11269bb50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11269b700>]}
+
+
+============================== 16:19:24.645197 | eb60f207-6d96-45c0-b36a-18ec38870b72 ==============================
+[0m16:19:24.645197 [info ] [MainThread]: Running with dbt=1.7.4
+[0m16:19:24.645897 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': 'logs', 'fail_fast': 'False', 'profiles_dir': '/Users/chloe.tarris/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt debug', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m16:19:24.646700 [info ] [MainThread]: dbt version: 1.7.4
+[0m16:19:24.647151 [info ] [MainThread]: python version: 3.10.0
+[0m16:19:24.647579 [info ] [MainThread]: python path: /Users/chloe.tarris/PycharmProjects/dbtjaffleshop/venv/bin/python
+[0m16:19:24.648008 [info ] [MainThread]: os info: macOS-14.2-x86_64-i386-64bit
+[0m16:19:24.755785 [info ] [MainThread]: Using profiles dir at /Users/chloe.tarris/.dbt
+[0m16:19:24.756290 [info ] [MainThread]: Using profiles.yml file at /Users/chloe.tarris/.dbt/profiles.yml
+[0m16:19:24.756682 [info ] [MainThread]: Using dbt_project.yml file at /Users/chloe.tarris/PycharmProjects/dbtjaffleshop/dbt_project.yml
+[0m16:19:24.757556 [info ] [MainThread]: adapter type: postgres
+[0m16:19:24.757948 [info ] [MainThread]: adapter version: 1.7.4
+[0m16:19:24.758345 [info ] [MainThread]: Configuration:
+[0m16:19:24.758722 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:19:24.759092 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m16:19:24.759468 [info ] [MainThread]: Required dependencies:
+[0m16:19:24.760169 [debug] [MainThread]: Executing "git --help"
+[0m16:19:24.789468 [debug] [MainThread]: STDOUT: "b"usage : git [--version] [-h | --help] [-C <chemin>] [-c <nom>=<valeur>]\n           [--exec-path[=<chemin>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<chemin>] [--work-tree=<chemin>] [--namespace=<nom>]\n           [--super-prefix=<chemin>] [--config-env=<nom>=<variable-d-environnement>]\n           <commande> [<args>]\n\nCi-dessous les commandes Git habituelles dans diverses situations\xc2\xa0:\n\nd\xc3\xa9marrer une zone de travail (voir aussi\xc2\xa0: git help tutorial)\n   clone     Cloner un d\xc3\xa9p\xc3\xb4t dans un nouveau r\xc3\xa9pertoire\n   init      Cr\xc3\xa9er un d\xc3\xa9p\xc3\xb4t Git vide ou r\xc3\xa9initialiser un existant\n\ntravailler sur la modification actuelle (voir aussi\xc2\xa0: git help revisions)\n   add       Ajouter le contenu de fichiers dans l'index\n   mv        D\xc3\xa9placer ou renommer un fichier, un r\xc3\xa9pertoire, ou un lien symbolique\n   restore   Restaurer les fichiers l'arbre de travail\n   rm        Supprimer des fichiers de la copie de travail et de l'index\n\nexaminer l'historique et l'\xc3\xa9tat (voir aussi\xc2\xa0: git help revisions)\n   bisect    Trouver par recherche binaire la modification qui a introduit un bogue\n   diff      Afficher les changements entre les validations, entre validation et copie de travail, etc\n   grep      Afficher les lignes correspondant \xc3\xa0 un motif\n   log       Afficher l'historique des validations\n   show      Afficher diff\xc3\xa9rents types d'objets\n   status    Afficher l'\xc3\xa9tat de la copie de travail\n\nagrandir, marquer et modifier votre historique\n   branch    Lister, cr\xc3\xa9er ou supprimer des branches\n   commit    Enregistrer les modifications dans le d\xc3\xa9p\xc3\xb4t\n   merge     Fusionner deux ou plusieurs historiques de d\xc3\xa9veloppement ensemble\n   rebase    R\xc3\xa9application des commits sur le sommet de l'autre base\n   reset     R\xc3\xa9initialiser la HEAD courante \xc3\xa0 l'\xc3\xa9tat sp\xc3\xa9cifi\xc3\xa9\n   switch    Basculer de branche\n   tag       Cr\xc3\xa9er, lister, supprimer ou v\xc3\xa9rifier un objet d'\xc3\xa9tiquette sign\xc3\xa9 avec GPG\n\ncollaborer (voir aussi\xc2\xa0: git help workflows)\n   fetch     T\xc3\xa9l\xc3\xa9charger les objets et r\xc3\xa9f\xc3\xa9rences depuis un autre d\xc3\xa9p\xc3\xb4t\n   pull      Rapatrier et int\xc3\xa9grer un autre d\xc3\xa9p\xc3\xb4t ou une branche locale\n   push      Mettre \xc3\xa0 jour les r\xc3\xa9f\xc3\xa9rences distantes ainsi que les objets associ\xc3\xa9s\n\n'git help -a' et 'git help -g' listent les sous-commandes disponibles et\nquelques concepts. Voir 'git help <commande>' ou 'git help <concept>'\npour en lire plus \xc3\xa0 propos d'une commande sp\xc3\xa9cifique ou d'un concept.\nVoir 'git help git' pour un survol du syst\xc3\xa8me.\n""
+[0m16:19:24.790562 [debug] [MainThread]: STDERR: "b''"
+[0m16:19:24.791194 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:19:24.791760 [info ] [MainThread]: Connection:
+[0m16:19:24.792473 [info ] [MainThread]:   host: jaffle_shop
+[0m16:19:24.793167 [info ] [MainThread]:   port: 5432
+[0m16:19:24.793797 [info ] [MainThread]:   user: chloetarris
+[0m16:19:24.794328 [info ] [MainThread]:   database: jaffle_shop
+[0m16:19:24.794797 [info ] [MainThread]:   schema: jaffle_shop
+[0m16:19:24.795254 [info ] [MainThread]:   connect_timeout: 10
+[0m16:19:24.795746 [info ] [MainThread]:   role: None
+[0m16:19:24.796215 [info ] [MainThread]:   search_path: None
+[0m16:19:24.796714 [info ] [MainThread]:   keepalives_idle: 0
+[0m16:19:24.797366 [info ] [MainThread]:   sslmode: None
+[0m16:19:24.797938 [info ] [MainThread]:   sslcert: None
+[0m16:19:24.798522 [info ] [MainThread]:   sslkey: None
+[0m16:19:24.799008 [info ] [MainThread]:   sslrootcert: None
+[0m16:19:24.799451 [info ] [MainThread]:   application_name: dbt
+[0m16:19:24.799894 [info ] [MainThread]:   retries: 1
+[0m16:19:24.800631 [info ] [MainThread]: Registered adapter: postgres=1.7.4
+[0m16:19:24.810907 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m16:19:24.812536 [debug] [MainThread]: Using postgres connection "debug"
+[0m16:19:24.813476 [debug] [MainThread]: On debug: select 1 as id
+[0m16:19:24.814370 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:19:24.844570 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+could not translate host name "jaffle_shop" to address: nodename nor servname provided, or not known
+
+[0m16:19:24.851534 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m16:19:24.852044 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m16:19:24.852559 [debug] [MainThread]: On debug: No close available on handle
+[0m16:19:24.853066 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m16:19:24.853573 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m16:19:24.854015 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/chloe.tarris/PycharmProjects/dbtjaffleshop/dbt_project.yml> not found
+
+[0m16:19:24.854484 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  could not translate host name "jaffle_shop" to address: nodename nor servname provided, or not known
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m16:19:24.856904 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.3144529, "process_user_time": 2.176491, "process_kernel_time": 0.310951, "process_mem_max_rss": "100032512", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m16:19:24.857686 [debug] [MainThread]: Command `dbt debug` failed at 16:19:24.857499 after 0.32 seconds
+[0m16:19:24.858238 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:19:24.858754 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110226290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112994d00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112994b20>]}
+[0m16:19:24.859319 [debug] [MainThread]: Flushing usage events

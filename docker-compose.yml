@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+
+  jaffle_shop:
+    image: postgres:15.1
+    container_name: dbt-jaffle_shop
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: "${DW_DATA_PGUSER}"
+      POSTGRES_PASSWORD: "${DW_DATA_PGPASSWORD}"
+      POSTGRES_DB: "${DW_DATA_PGDATABASE}"

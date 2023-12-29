@@ -1,0 +1,567 @@
+[0m16:07:11.602016 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d67a590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fa0ffd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fa0f700>]}
+
+
+============================== 16:07:11.606847 | 4bb6cf73-e0e3-4bd2-acfc-26bd6e871b44 ==============================
+[0m16:07:11.606847 [info ] [MainThread]: Running with dbt=1.7.4
+[0m16:07:11.607544 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/chloe.tarris/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': '/Users/chloe.tarris/PycharmProjects/dbtjaffleshop/jaffle_shop/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:07:11.608284 [info ] [MainThread]: dbt version: 1.7.4
+[0m16:07:11.608728 [info ] [MainThread]: python version: 3.10.0
+[0m16:07:11.609149 [info ] [MainThread]: python path: /Users/chloe.tarris/PycharmProjects/dbtjaffleshop/venv/bin/python
+[0m16:07:11.609571 [info ] [MainThread]: os info: macOS-14.2-x86_64-i386-64bit
+[0m16:07:11.721992 [info ] [MainThread]: Using profiles dir at /Users/chloe.tarris/.dbt
+[0m16:07:11.722491 [info ] [MainThread]: Using profiles.yml file at /Users/chloe.tarris/.dbt/profiles.yml
+[0m16:07:11.722881 [info ] [MainThread]: Using dbt_project.yml file at /Users/chloe.tarris/PycharmProjects/dbtjaffleshop/jaffle_shop/dbt_project.yml
+[0m16:07:11.723816 [info ] [MainThread]: adapter type: postgres
+[0m16:07:11.724218 [info ] [MainThread]: adapter version: 1.7.4
+[0m16:07:11.808886 [info ] [MainThread]: Configuration:
+[0m16:07:11.809428 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:07:11.809811 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:07:11.810193 [info ] [MainThread]: Required dependencies:
+[0m16:07:11.810910 [debug] [MainThread]: Executing "git --help"
+[0m16:07:11.841103 [debug] [MainThread]: STDOUT: "b"usage : git [--version] [-h | --help] [-C <chemin>] [-c <nom>=<valeur>]\n           [--exec-path[=<chemin>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<chemin>] [--work-tree=<chemin>] [--namespace=<nom>]\n           [--super-prefix=<chemin>] [--config-env=<nom>=<variable-d-environnement>]\n           <commande> [<args>]\n\nCi-dessous les commandes Git habituelles dans diverses situations\xc2\xa0:\n\nd\xc3\xa9marrer une zone de travail (voir aussi\xc2\xa0: git help tutorial)\n   clone     Cloner un d\xc3\xa9p\xc3\xb4t dans un nouveau r\xc3\xa9pertoire\n   init      Cr\xc3\xa9er un d\xc3\xa9p\xc3\xb4t Git vide ou r\xc3\xa9initialiser un existant\n\ntravailler sur la modification actuelle (voir aussi\xc2\xa0: git help revisions)\n   add       Ajouter le contenu de fichiers dans l'index\n   mv        D\xc3\xa9placer ou renommer un fichier, un r\xc3\xa9pertoire, ou un lien symbolique\n   restore   Restaurer les fichiers l'arbre de travail\n   rm        Supprimer des fichiers de la copie de travail et de l'index\n\nexaminer l'historique et l'\xc3\xa9tat (voir aussi\xc2\xa0: git help revisions)\n   bisect    Trouver par recherche binaire la modification qui a introduit un bogue\n   diff      Afficher les changements entre les validations, entre validation et copie de travail, etc\n   grep      Afficher les lignes correspondant \xc3\xa0 un motif\n   log       Afficher l'historique des validations\n   show      Afficher diff\xc3\xa9rents types d'objets\n   status    Afficher l'\xc3\xa9tat de la copie de travail\n\nagrandir, marquer et modifier votre historique\n   branch    Lister, cr\xc3\xa9er ou supprimer des branches\n   commit    Enregistrer les modifications dans le d\xc3\xa9p\xc3\xb4t\n   merge     Fusionner deux ou plusieurs historiques de d\xc3\xa9veloppement ensemble\n   rebase    R\xc3\xa9application des commits sur le sommet de l'autre base\n   reset     R\xc3\xa9initialiser la HEAD courante \xc3\xa0 l'\xc3\xa9tat sp\xc3\xa9cifi\xc3\xa9\n   switch    Basculer de branche\n   tag       Cr\xc3\xa9er, lister, supprimer ou v\xc3\xa9rifier un objet d'\xc3\xa9tiquette sign\xc3\xa9 avec GPG\n\ncollaborer (voir aussi\xc2\xa0: git help workflows)\n   fetch     T\xc3\xa9l\xc3\xa9charger les objets et r\xc3\xa9f\xc3\xa9rences depuis un autre d\xc3\xa9p\xc3\xb4t\n   pull      Rapatrier et int\xc3\xa9grer un autre d\xc3\xa9p\xc3\xb4t ou une branche locale\n   push      Mettre \xc3\xa0 jour les r\xc3\xa9f\xc3\xa9rences distantes ainsi que les objets associ\xc3\xa9s\n\n'git help -a' et 'git help -g' listent les sous-commandes disponibles et\nquelques concepts. Voir 'git help <commande>' ou 'git help <concept>'\npour en lire plus \xc3\xa0 propos d'une commande sp\xc3\xa9cifique ou d'un concept.\nVoir 'git help git' pour un survol du syst\xc3\xa8me.\n""
+[0m16:07:11.842203 [debug] [MainThread]: STDERR: "b''"
+[0m16:07:11.842707 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:07:11.843191 [info ] [MainThread]: Connection:
+[0m16:07:11.843735 [info ] [MainThread]:   host: jaffle_shop
+[0m16:07:11.844171 [info ] [MainThread]:   port: 5432
+[0m16:07:11.844596 [info ] [MainThread]:   user: chloetarris
+[0m16:07:11.845021 [info ] [MainThread]:   database: jaffle_shop
+[0m16:07:11.845441 [info ] [MainThread]:   schema: jaffle_shop
+[0m16:07:11.845870 [info ] [MainThread]:   connect_timeout: 10
+[0m16:07:11.846280 [info ] [MainThread]:   role: None
+[0m16:07:11.846691 [info ] [MainThread]:   search_path: None
+[0m16:07:11.847106 [info ] [MainThread]:   keepalives_idle: 0
+[0m16:07:11.847516 [info ] [MainThread]:   sslmode: None
+[0m16:07:11.847921 [info ] [MainThread]:   sslcert: None
+[0m16:07:11.848328 [info ] [MainThread]:   sslkey: None
+[0m16:07:11.848735 [info ] [MainThread]:   sslrootcert: None
+[0m16:07:11.849151 [info ] [MainThread]:   application_name: dbt
+[0m16:07:11.849561 [info ] [MainThread]:   retries: 1
+[0m16:07:11.850187 [info ] [MainThread]: Registered adapter: postgres=1.7.4
+[0m16:07:11.857693 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m16:07:11.859187 [debug] [MainThread]: Using postgres connection "debug"
+[0m16:07:11.859714 [debug] [MainThread]: On debug: select 1 as id
+[0m16:07:11.860243 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:07:11.874341 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+could not translate host name "jaffle_shop" to address: nodename nor servname provided, or not known
+
+[0m16:07:11.880932 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m16:07:11.881458 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m16:07:11.881947 [debug] [MainThread]: On debug: No close available on handle
+[0m16:07:11.882458 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m16:07:11.882964 [info ] [MainThread]: [31m1 check failed:[0m
+[0m16:07:11.883442 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  could not translate host name "jaffle_shop" to address: nodename nor servname provided, or not known
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m16:07:11.886092 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.37879896, "process_user_time": 2.232928, "process_kernel_time": 0.281818, "process_mem_max_rss": "98971648", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m16:07:11.886906 [debug] [MainThread]: Command `dbt debug` failed at 16:07:11.886715 after 0.38 seconds
+[0m16:07:11.887440 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:07:11.887980 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d67a590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fdf70a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10fe2dd80>]}
+[0m16:07:11.888574 [debug] [MainThread]: Flushing usage events
+[0m16:19:44.023751 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10607e590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10841bfd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10841b700>]}
+
+
+============================== 16:19:44.028465 | ac4b89f4-2b8a-4a02-bba7-9c2cd9f7bde9 ==============================
+[0m16:19:44.028465 [info ] [MainThread]: Running with dbt=1.7.4
+[0m16:19:44.029142 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/Users/chloe.tarris/PycharmProjects/dbtjaffleshop/jaffle_shop/logs', 'version_check': 'True', 'profiles_dir': '/Users/chloe.tarris/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:19:44.029863 [info ] [MainThread]: dbt version: 1.7.4
+[0m16:19:44.030304 [info ] [MainThread]: python version: 3.10.0
+[0m16:19:44.030721 [info ] [MainThread]: python path: /Users/chloe.tarris/PycharmProjects/dbtjaffleshop/venv/bin/python
+[0m16:19:44.031139 [info ] [MainThread]: os info: macOS-14.2-x86_64-i386-64bit
+[0m16:19:44.140362 [info ] [MainThread]: Using profiles dir at /Users/chloe.tarris/.dbt
+[0m16:19:44.140862 [info ] [MainThread]: Using profiles.yml file at /Users/chloe.tarris/.dbt/profiles.yml
+[0m16:19:44.141246 [info ] [MainThread]: Using dbt_project.yml file at /Users/chloe.tarris/PycharmProjects/dbtjaffleshop/jaffle_shop/dbt_project.yml
+[0m16:19:44.142257 [info ] [MainThread]: adapter type: postgres
+[0m16:19:44.142644 [info ] [MainThread]: adapter version: 1.7.4
+[0m16:19:44.224900 [info ] [MainThread]: Configuration:
+[0m16:19:44.225398 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:19:44.225788 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:19:44.226152 [info ] [MainThread]: Required dependencies:
+[0m16:19:44.226959 [debug] [MainThread]: Executing "git --help"
+[0m16:19:44.254642 [debug] [MainThread]: STDOUT: "b"usage : git [--version] [-h | --help] [-C <chemin>] [-c <nom>=<valeur>]\n           [--exec-path[=<chemin>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<chemin>] [--work-tree=<chemin>] [--namespace=<nom>]\n           [--super-prefix=<chemin>] [--config-env=<nom>=<variable-d-environnement>]\n           <commande> [<args>]\n\nCi-dessous les commandes Git habituelles dans diverses situations\xc2\xa0:\n\nd\xc3\xa9marrer une zone de travail (voir aussi\xc2\xa0: git help tutorial)\n   clone     Cloner un d\xc3\xa9p\xc3\xb4t dans un nouveau r\xc3\xa9pertoire\n   init      Cr\xc3\xa9er un d\xc3\xa9p\xc3\xb4t Git vide ou r\xc3\xa9initialiser un existant\n\ntravailler sur la modification actuelle (voir aussi\xc2\xa0: git help revisions)\n   add       Ajouter le contenu de fichiers dans l'index\n   mv        D\xc3\xa9placer ou renommer un fichier, un r\xc3\xa9pertoire, ou un lien symbolique\n   restore   Restaurer les fichiers l'arbre de travail\n   rm        Supprimer des fichiers de la copie de travail et de l'index\n\nexaminer l'historique et l'\xc3\xa9tat (voir aussi\xc2\xa0: git help revisions)\n   bisect    Trouver par recherche binaire la modification qui a introduit un bogue\n   diff      Afficher les changements entre les validations, entre validation et copie de travail, etc\n   grep      Afficher les lignes correspondant \xc3\xa0 un motif\n   log       Afficher l'historique des validations\n   show      Afficher diff\xc3\xa9rents types d'objets\n   status    Afficher l'\xc3\xa9tat de la copie de travail\n\nagrandir, marquer et modifier votre historique\n   branch    Lister, cr\xc3\xa9er ou supprimer des branches\n   commit    Enregistrer les modifications dans le d\xc3\xa9p\xc3\xb4t\n   merge     Fusionner deux ou plusieurs historiques de d\xc3\xa9veloppement ensemble\n   rebase    R\xc3\xa9application des commits sur le sommet de l'autre base\n   reset     R\xc3\xa9initialiser la HEAD courante \xc3\xa0 l'\xc3\xa9tat sp\xc3\xa9cifi\xc3\xa9\n   switch    Basculer de branche\n   tag       Cr\xc3\xa9er, lister, supprimer ou v\xc3\xa9rifier un objet d'\xc3\xa9tiquette sign\xc3\xa9 avec GPG\n\ncollaborer (voir aussi\xc2\xa0: git help workflows)\n   fetch     T\xc3\xa9l\xc3\xa9charger les objets et r\xc3\xa9f\xc3\xa9rences depuis un autre d\xc3\xa9p\xc3\xb4t\n   pull      Rapatrier et int\xc3\xa9grer un autre d\xc3\xa9p\xc3\xb4t ou une branche locale\n   push      Mettre \xc3\xa0 jour les r\xc3\xa9f\xc3\xa9rences distantes ainsi que les objets associ\xc3\xa9s\n\n'git help -a' et 'git help -g' listent les sous-commandes disponibles et\nquelques concepts. Voir 'git help <commande>' ou 'git help <concept>'\npour en lire plus \xc3\xa0 propos d'une commande sp\xc3\xa9cifique ou d'un concept.\nVoir 'git help git' pour un survol du syst\xc3\xa8me.\n""
+[0m16:19:44.256091 [debug] [MainThread]: STDERR: "b''"
+[0m16:19:44.256659 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:19:44.257170 [info ] [MainThread]: Connection:
+[0m16:19:44.257714 [info ] [MainThread]:   host: jaffle_shop
+[0m16:19:44.258171 [info ] [MainThread]:   port: 5432
+[0m16:19:44.258606 [info ] [MainThread]:   user: chloetarris
+[0m16:19:44.259032 [info ] [MainThread]:   database: jaffle_shop
+[0m16:19:44.259459 [info ] [MainThread]:   schema: jaffle_shop
+[0m16:19:44.259889 [info ] [MainThread]:   connect_timeout: 10
+[0m16:19:44.260322 [info ] [MainThread]:   role: None
+[0m16:19:44.260764 [info ] [MainThread]:   search_path: None
+[0m16:19:44.261207 [info ] [MainThread]:   keepalives_idle: 0
+[0m16:19:44.261654 [info ] [MainThread]:   sslmode: None
+[0m16:19:44.262086 [info ] [MainThread]:   sslcert: None
+[0m16:19:44.262524 [info ] [MainThread]:   sslkey: None
+[0m16:19:44.262951 [info ] [MainThread]:   sslrootcert: None
+[0m16:19:44.263369 [info ] [MainThread]:   application_name: dbt
+[0m16:19:44.263793 [info ] [MainThread]:   retries: 1
+[0m16:19:44.264591 [info ] [MainThread]: Registered adapter: postgres=1.7.4
+[0m16:19:44.275125 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m16:19:44.277660 [debug] [MainThread]: Using postgres connection "debug"
+[0m16:19:44.278328 [debug] [MainThread]: On debug: select 1 as id
+[0m16:19:44.278928 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:19:44.294376 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+could not translate host name "jaffle_shop" to address: nodename nor servname provided, or not known
+
+[0m16:19:44.302442 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m16:19:44.303039 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m16:19:44.303593 [debug] [MainThread]: On debug: No close available on handle
+[0m16:19:44.304252 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m16:19:44.304820 [info ] [MainThread]: [31m1 check failed:[0m
+[0m16:19:44.305339 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  could not translate host name "jaffle_shop" to address: nodename nor servname provided, or not known
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m16:19:44.308542 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.38579497, "process_user_time": 2.199408, "process_kernel_time": 0.292748, "process_mem_max_rss": "100802560", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m16:19:44.309488 [debug] [MainThread]: Command `dbt debug` failed at 16:19:44.309270 after 0.39 seconds
+[0m16:19:44.310108 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:19:44.310826 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10607e590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10883f0a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108875d80>]}
+[0m16:19:44.311632 [debug] [MainThread]: Flushing usage events
+[0m16:20:39.102199 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089754e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ad17b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ad17700>]}
+
+
+============================== 16:20:39.107432 | 15a9585e-d5f1-4651-ac7d-f277ebaac438 ==============================
+[0m16:20:39.107432 [info ] [MainThread]: Running with dbt=1.7.4
+[0m16:20:39.108358 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/chloe.tarris/.dbt', 'debug': 'False', 'warn_error': 'None', 'log_path': '/Users/chloe.tarris/PycharmProjects/dbtjaffleshop/jaffle_shop/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:20:39.109038 [info ] [MainThread]: dbt version: 1.7.4
+[0m16:20:39.109462 [info ] [MainThread]: python version: 3.10.0
+[0m16:20:39.109897 [info ] [MainThread]: python path: /Users/chloe.tarris/PycharmProjects/dbtjaffleshop/venv/bin/python
+[0m16:20:39.110274 [info ] [MainThread]: os info: macOS-14.2-x86_64-i386-64bit
+[0m16:20:39.222587 [info ] [MainThread]: Using profiles dir at /Users/chloe.tarris/.dbt
+[0m16:20:39.223086 [info ] [MainThread]: Using profiles.yml file at /Users/chloe.tarris/.dbt/profiles.yml
+[0m16:20:39.223478 [info ] [MainThread]: Using dbt_project.yml file at /Users/chloe.tarris/PycharmProjects/dbtjaffleshop/jaffle_shop/dbt_project.yml
+[0m16:20:39.224429 [info ] [MainThread]: adapter type: postgres
+[0m16:20:39.224843 [info ] [MainThread]: adapter version: 1.7.4
+[0m16:20:39.307278 [info ] [MainThread]: Configuration:
+[0m16:20:39.307790 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:20:39.308176 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:20:39.308555 [info ] [MainThread]: Required dependencies:
+[0m16:20:39.309301 [debug] [MainThread]: Executing "git --help"
+[0m16:20:39.342776 [debug] [MainThread]: STDOUT: "b"usage : git [--version] [-h | --help] [-C <chemin>] [-c <nom>=<valeur>]\n           [--exec-path[=<chemin>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<chemin>] [--work-tree=<chemin>] [--namespace=<nom>]\n           [--super-prefix=<chemin>] [--config-env=<nom>=<variable-d-environnement>]\n           <commande> [<args>]\n\nCi-dessous les commandes Git habituelles dans diverses situations\xc2\xa0:\n\nd\xc3\xa9marrer une zone de travail (voir aussi\xc2\xa0: git help tutorial)\n   clone     Cloner un d\xc3\xa9p\xc3\xb4t dans un nouveau r\xc3\xa9pertoire\n   init      Cr\xc3\xa9er un d\xc3\xa9p\xc3\xb4t Git vide ou r\xc3\xa9initialiser un existant\n\ntravailler sur la modification actuelle (voir aussi\xc2\xa0: git help revisions)\n   add       Ajouter le contenu de fichiers dans l'index\n   mv        D\xc3\xa9placer ou renommer un fichier, un r\xc3\xa9pertoire, ou un lien symbolique\n   restore   Restaurer les fichiers l'arbre de travail\n   rm        Supprimer des fichiers de la copie de travail et de l'index\n\nexaminer l'historique et l'\xc3\xa9tat (voir aussi\xc2\xa0: git help revisions)\n   bisect    Trouver par recherche binaire la modification qui a introduit un bogue\n   diff      Afficher les changements entre les validations, entre validation et copie de travail, etc\n   grep      Afficher les lignes correspondant \xc3\xa0 un motif\n   log       Afficher l'historique des validations\n   show      Afficher diff\xc3\xa9rents types d'objets\n   status    Afficher l'\xc3\xa9tat de la copie de travail\n\nagrandir, marquer et modifier votre historique\n   branch    Lister, cr\xc3\xa9er ou supprimer des branches\n   commit    Enregistrer les modifications dans le d\xc3\xa9p\xc3\xb4t\n   merge     Fusionner deux ou plusieurs historiques de d\xc3\xa9veloppement ensemble\n   rebase    R\xc3\xa9application des commits sur le sommet de l'autre base\n   reset     R\xc3\xa9initialiser la HEAD courante \xc3\xa0 l'\xc3\xa9tat sp\xc3\xa9cifi\xc3\xa9\n   switch    Basculer de branche\n   tag       Cr\xc3\xa9er, lister, supprimer ou v\xc3\xa9rifier un objet d'\xc3\xa9tiquette sign\xc3\xa9 avec GPG\n\ncollaborer (voir aussi\xc2\xa0: git help workflows)\n   fetch     T\xc3\xa9l\xc3\xa9charger les objets et r\xc3\xa9f\xc3\xa9rences depuis un autre d\xc3\xa9p\xc3\xb4t\n   pull      Rapatrier et int\xc3\xa9grer un autre d\xc3\xa9p\xc3\xb4t ou une branche locale\n   push      Mettre \xc3\xa0 jour les r\xc3\xa9f\xc3\xa9rences distantes ainsi que les objets associ\xc3\xa9s\n\n'git help -a' et 'git help -g' listent les sous-commandes disponibles et\nquelques concepts. Voir 'git help <commande>' ou 'git help <concept>'\npour en lire plus \xc3\xa0 propos d'une commande sp\xc3\xa9cifique ou d'un concept.\nVoir 'git help git' pour un survol du syst\xc3\xa8me.\n""
+[0m16:20:39.343890 [debug] [MainThread]: STDERR: "b''"
+[0m16:20:39.344398 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:20:39.344882 [info ] [MainThread]: Connection:
+[0m16:20:39.345397 [info ] [MainThread]:   host: jaffle_shop
+[0m16:20:39.345848 [info ] [MainThread]:   port: 5432
+[0m16:20:39.346274 [info ] [MainThread]:   user: chloetarris
+[0m16:20:39.346697 [info ] [MainThread]:   database: jaffle_shop
+[0m16:20:39.347122 [info ] [MainThread]:   schema: jaffle_shop
+[0m16:20:39.347544 [info ] [MainThread]:   connect_timeout: 10
+[0m16:20:39.347969 [info ] [MainThread]:   role: None
+[0m16:20:39.348400 [info ] [MainThread]:   search_path: None
+[0m16:20:39.348828 [info ] [MainThread]:   keepalives_idle: 0
+[0m16:20:39.349237 [info ] [MainThread]:   sslmode: None
+[0m16:20:39.349651 [info ] [MainThread]:   sslcert: None
+[0m16:20:39.350061 [info ] [MainThread]:   sslkey: None
+[0m16:20:39.350472 [info ] [MainThread]:   sslrootcert: None
+[0m16:20:39.350885 [info ] [MainThread]:   application_name: dbt
+[0m16:20:39.351298 [info ] [MainThread]:   retries: 1
+[0m16:20:39.351938 [info ] [MainThread]: Registered adapter: postgres=1.7.4
+[0m16:20:39.360260 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m16:20:39.361698 [debug] [MainThread]: Using postgres connection "debug"
+[0m16:20:39.362388 [debug] [MainThread]: On debug: select 1 as id
+[0m16:20:39.362880 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:20:39.378203 [debug] [MainThread]: Postgres adapter: Got a retryable error when attempting to open a postgres connection.
+1 attempts remaining. Retrying in 0 seconds.
+Error:
+could not translate host name "jaffle_shop" to address: nodename nor servname provided, or not known
+
+[0m16:20:39.384904 [debug] [MainThread]: Postgres adapter: Error running SQL: select 1 as id
+[0m16:20:39.385430 [debug] [MainThread]: Postgres adapter: Rolling back transaction.
+[0m16:20:39.385928 [debug] [MainThread]: On debug: No close available on handle
+[0m16:20:39.386499 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m16:20:39.387025 [info ] [MainThread]: [31m1 check failed:[0m
+[0m16:20:39.387502 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  could not translate host name "jaffle_shop" to address: nodename nor servname provided, or not known
+  
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m16:20:39.390273 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_wall_clock_time": 0.38223955, "process_user_time": 2.194986, "process_kernel_time": 0.288687, "process_mem_max_rss": "99889152", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m16:20:39.391128 [debug] [MainThread]: Command `dbt debug` failed at 16:20:39.390931 after 0.38 seconds
+[0m16:20:39.391663 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:20:39.392219 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1089754e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b13b040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b171db0>]}
+[0m16:20:39.392826 [debug] [MainThread]: Flushing usage events
+[0m16:33:02.462280 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b8ff640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dc2fa90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dc2f730>]}
+
+
+============================== 16:33:02.474758 | 3b19fa8c-7a41-403a-b767-06e7d3c680ab ==============================
+[0m16:33:02.474758 [info ] [MainThread]: Running with dbt=1.7.4
+[0m16:33:02.475559 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '/Users/chloe.tarris/PycharmProjects/dbtjaffleshop/.dbt/', 'log_path': '/Users/chloe.tarris/PycharmProjects/dbtjaffleshop/jaffle_shop/logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m16:33:02.476519 [info ] [MainThread]: dbt version: 1.7.4
+[0m16:33:02.477144 [info ] [MainThread]: python version: 3.10.0
+[0m16:33:02.477707 [info ] [MainThread]: python path: /Users/chloe.tarris/PycharmProjects/dbtjaffleshop/venv/bin/python
+[0m16:33:02.478603 [info ] [MainThread]: os info: macOS-14.2-x86_64-i386-64bit
+[0m16:33:02.811445 [info ] [MainThread]: Using profiles dir at /Users/chloe.tarris/PycharmProjects/dbtjaffleshop/.dbt/
+[0m16:33:02.812108 [info ] [MainThread]: Using profiles.yml file at /Users/chloe.tarris/PycharmProjects/dbtjaffleshop/.dbt/profiles.yml
+[0m16:33:02.812591 [info ] [MainThread]: Using dbt_project.yml file at /Users/chloe.tarris/PycharmProjects/dbtjaffleshop/jaffle_shop/dbt_project.yml
+[0m16:33:02.819027 [info ] [MainThread]: adapter type: postgres
+[0m16:33:02.819759 [info ] [MainThread]: adapter version: 1.7.4
+[0m16:33:02.936234 [info ] [MainThread]: Configuration:
+[0m16:33:02.936909 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:33:02.937385 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:33:02.937851 [info ] [MainThread]: Required dependencies:
+[0m16:33:02.938695 [debug] [MainThread]: Executing "git --help"
+[0m16:33:02.978587 [debug] [MainThread]: STDOUT: "b"usage : git [--version] [-h | --help] [-C <chemin>] [-c <nom>=<valeur>]\n           [--exec-path[=<chemin>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<chemin>] [--work-tree=<chemin>] [--namespace=<nom>]\n           [--super-prefix=<chemin>] [--config-env=<nom>=<variable-d-environnement>]\n           <commande> [<args>]\n\nCi-dessous les commandes Git habituelles dans diverses situations\xc2\xa0:\n\nd\xc3\xa9marrer une zone de travail (voir aussi\xc2\xa0: git help tutorial)\n   clone     Cloner un d\xc3\xa9p\xc3\xb4t dans un nouveau r\xc3\xa9pertoire\n   init      Cr\xc3\xa9er un d\xc3\xa9p\xc3\xb4t Git vide ou r\xc3\xa9initialiser un existant\n\ntravailler sur la modification actuelle (voir aussi\xc2\xa0: git help revisions)\n   add       Ajouter le contenu de fichiers dans l'index\n   mv        D\xc3\xa9placer ou renommer un fichier, un r\xc3\xa9pertoire, ou un lien symbolique\n   restore   Restaurer les fichiers l'arbre de travail\n   rm        Supprimer des fichiers de la copie de travail et de l'index\n\nexaminer l'historique et l'\xc3\xa9tat (voir aussi\xc2\xa0: git help revisions)\n   bisect    Trouver par recherche binaire la modification qui a introduit un bogue\n   diff      Afficher les changements entre les validations, entre validation et copie de travail, etc\n   grep      Afficher les lignes correspondant \xc3\xa0 un motif\n   log       Afficher l'historique des validations\n   show      Afficher diff\xc3\xa9rents types d'objets\n   status    Afficher l'\xc3\xa9tat de la copie de travail\n\nagrandir, marquer et modifier votre historique\n   branch    Lister, cr\xc3\xa9er ou supprimer des branches\n   commit    Enregistrer les modifications dans le d\xc3\xa9p\xc3\xb4t\n   merge     Fusionner deux ou plusieurs historiques de d\xc3\xa9veloppement ensemble\n   rebase    R\xc3\xa9application des commits sur le sommet de l'autre base\n   reset     R\xc3\xa9initialiser la HEAD courante \xc3\xa0 l'\xc3\xa9tat sp\xc3\xa9cifi\xc3\xa9\n   switch    Basculer de branche\n   tag       Cr\xc3\xa9er, lister, supprimer ou v\xc3\xa9rifier un objet d'\xc3\xa9tiquette sign\xc3\xa9 avec GPG\n\ncollaborer (voir aussi\xc2\xa0: git help workflows)\n   fetch     T\xc3\xa9l\xc3\xa9charger les objets et r\xc3\xa9f\xc3\xa9rences depuis un autre d\xc3\xa9p\xc3\xb4t\n   pull      Rapatrier et int\xc3\xa9grer un autre d\xc3\xa9p\xc3\xb4t ou une branche locale\n   push      Mettre \xc3\xa0 jour les r\xc3\xa9f\xc3\xa9rences distantes ainsi que les objets associ\xc3\xa9s\n\n'git help -a' et 'git help -g' listent les sous-commandes disponibles et\nquelques concepts. Voir 'git help <commande>' ou 'git help <concept>'\npour en lire plus \xc3\xa0 propos d'une commande sp\xc3\xa9cifique ou d'un concept.\nVoir 'git help git' pour un survol du syst\xc3\xa8me.\n""
+[0m16:33:02.979853 [debug] [MainThread]: STDERR: "b''"
+[0m16:33:02.980472 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:33:02.981133 [info ] [MainThread]: Connection:
+[0m16:33:02.981894 [info ] [MainThread]:   host: 127.0.0.1
+[0m16:33:02.982473 [info ] [MainThread]:   port: 5432
+[0m16:33:02.983021 [info ] [MainThread]:   user: chloetarris
+[0m16:33:02.983578 [info ] [MainThread]:   database: jaffle_shop
+[0m16:33:02.984110 [info ] [MainThread]:   schema: raw
+[0m16:33:02.984748 [info ] [MainThread]:   connect_timeout: 10
+[0m16:33:02.985451 [info ] [MainThread]:   role: None
+[0m16:33:02.986020 [info ] [MainThread]:   search_path: None
+[0m16:33:02.986574 [info ] [MainThread]:   keepalives_idle: 60
+[0m16:33:02.987099 [info ] [MainThread]:   sslmode: None
+[0m16:33:02.987617 [info ] [MainThread]:   sslcert: None
+[0m16:33:02.988139 [info ] [MainThread]:   sslkey: None
+[0m16:33:02.988663 [info ] [MainThread]:   sslrootcert: None
+[0m16:33:02.989160 [info ] [MainThread]:   application_name: dbt
+[0m16:33:02.989654 [info ] [MainThread]:   retries: 1
+[0m16:33:02.990564 [info ] [MainThread]: Registered adapter: postgres=1.7.4
+[0m16:33:03.022000 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m16:33:03.023522 [debug] [MainThread]: Using postgres connection "debug"
+[0m16:33:03.024098 [debug] [MainThread]: On debug: select 1 as id
+[0m16:33:03.024643 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:33:03.090782 [debug] [MainThread]: SQL status: SELECT 1 in 0.0 seconds
+[0m16:33:03.092652 [debug] [MainThread]: On debug: Close
+[0m16:33:03.093309 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m16:33:03.093874 [info ] [MainThread]: [32mAll checks passed![0m
+[0m16:33:03.103504 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.7792575, "process_user_time": 2.658102, "process_kernel_time": 0.435679, "process_mem_max_rss": "103526400", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m16:33:03.104482 [debug] [MainThread]: Command `dbt debug` succeeded at 16:33:03.104236 after 0.78 seconds
+[0m16:33:03.105181 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m16:33:03.105790 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b8ff640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dbb6bf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dbb5a50>]}
+[0m16:33:03.106467 [debug] [MainThread]: Flushing usage events
+[0m16:33:48.356180 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10752f640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1098fba90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1098fb730>]}
+
+
+============================== 16:33:48.361076 | b092a0e4-f326-47e7-85f0-e74f5b514a15 ==============================
+[0m16:33:48.361076 [info ] [MainThread]: Running with dbt=1.7.4
+[0m16:33:48.361806 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/chloe.tarris/PycharmProjects/dbtjaffleshop/.dbt/', 'debug': 'False', 'warn_error': 'None', 'log_path': '/Users/chloe.tarris/PycharmProjects/dbtjaffleshop/jaffle_shop/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt run', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:33:48.594018 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b092a0e4-f326-47e7-85f0-e74f5b514a15', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10988e8c0>]}
+[0m16:33:48.686677 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b092a0e4-f326-47e7-85f0-e74f5b514a15', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109847af0>]}
+[0m16:33:48.687929 [info ] [MainThread]: Registered adapter: postgres=1.7.4
+[0m16:33:48.710667 [debug] [MainThread]: checksum: 248e8aba381ba2d577dce7ab50d2010c2aac45d2b27e6e6214cdd96d2d41fabc, vars: {}, profile: , target: , version: 1.7.4
+[0m16:33:48.712821 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m16:33:48.713533 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'b092a0e4-f326-47e7-85f0-e74f5b514a15', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ea4df0>]}
+[0m16:33:50.262383 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b092a0e4-f326-47e7-85f0-e74f5b514a15', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a8380d0>]}
+[0m16:33:50.279009 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b092a0e4-f326-47e7-85f0-e74f5b514a15', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a83bbe0>]}
+[0m16:33:50.279612 [info ] [MainThread]: Found 2 models, 4 tests, 0 sources, 0 exposures, 0 metrics, 401 macros, 0 groups, 0 semantic models
+[0m16:33:50.280166 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b092a0e4-f326-47e7-85f0-e74f5b514a15', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a838070>]}
+[0m16:33:50.281859 [info ] [MainThread]: 
+[0m16:33:50.282728 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m16:33:50.283886 [debug] [ThreadPool]: Acquiring new postgres connection 'list_jaffle_shop'
+[0m16:33:50.296137 [debug] [ThreadPool]: Using postgres connection "list_jaffle_shop"
+[0m16:33:50.296751 [debug] [ThreadPool]: On list_jaffle_shop: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "list_jaffle_shop"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m16:33:50.297226 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:33:50.335289 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.0 seconds
+[0m16:33:50.336915 [debug] [ThreadPool]: On list_jaffle_shop: Close
+[0m16:33:50.338183 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_jaffle_shop, now create_jaffle_shop_raw)
+[0m16:33:50.338996 [debug] [ThreadPool]: Creating schema "database: "jaffle_shop"
+schema: "raw"
+"
+[0m16:33:50.345323 [debug] [ThreadPool]: Using postgres connection "create_jaffle_shop_raw"
+[0m16:33:50.345810 [debug] [ThreadPool]: On create_jaffle_shop_raw: BEGIN
+[0m16:33:50.346235 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:33:50.358934 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m16:33:50.359499 [debug] [ThreadPool]: Using postgres connection "create_jaffle_shop_raw"
+[0m16:33:50.359965 [debug] [ThreadPool]: On create_jaffle_shop_raw: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "create_jaffle_shop_raw"} */
+create schema if not exists "raw"
+[0m16:33:50.361086 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.0 seconds
+[0m16:33:50.362166 [debug] [ThreadPool]: On create_jaffle_shop_raw: COMMIT
+[0m16:33:50.362613 [debug] [ThreadPool]: Using postgres connection "create_jaffle_shop_raw"
+[0m16:33:50.363049 [debug] [ThreadPool]: On create_jaffle_shop_raw: COMMIT
+[0m16:33:50.364666 [debug] [ThreadPool]: SQL status: COMMIT in 0.0 seconds
+[0m16:33:50.365139 [debug] [ThreadPool]: On create_jaffle_shop_raw: Close
+[0m16:33:50.367030 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_jaffle_shop_raw, now list_jaffle_shop_raw)
+[0m16:33:50.373421 [debug] [ThreadPool]: Using postgres connection "list_jaffle_shop_raw"
+[0m16:33:50.373880 [debug] [ThreadPool]: On list_jaffle_shop_raw: BEGIN
+[0m16:33:50.374307 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:33:50.387666 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m16:33:50.388191 [debug] [ThreadPool]: Using postgres connection "list_jaffle_shop_raw"
+[0m16:33:50.388625 [debug] [ThreadPool]: On list_jaffle_shop_raw: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "list_jaffle_shop_raw"} */
+select
+      'jaffle_shop' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'raw'
+    union all
+    select
+      'jaffle_shop' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'raw'
+    union all
+    select
+      'jaffle_shop' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'raw'
+  
+[0m16:33:50.396652 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.0 seconds
+[0m16:33:50.397981 [debug] [ThreadPool]: On list_jaffle_shop_raw: ROLLBACK
+[0m16:33:50.398895 [debug] [ThreadPool]: On list_jaffle_shop_raw: Close
+[0m16:33:50.403391 [debug] [MainThread]: Using postgres connection "master"
+[0m16:33:50.403811 [debug] [MainThread]: On master: BEGIN
+[0m16:33:50.404204 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:33:50.416777 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m16:33:50.417380 [debug] [MainThread]: Using postgres connection "master"
+[0m16:33:50.417907 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "jaffle_shop", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v', 'm')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m16:33:50.424152 [debug] [MainThread]: SQL status: SELECT 0 in 0.0 seconds
+[0m16:33:50.425377 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b092a0e4-f326-47e7-85f0-e74f5b514a15', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a883700>]}
+[0m16:33:50.425890 [debug] [MainThread]: On master: ROLLBACK
+[0m16:33:50.426612 [debug] [MainThread]: Using postgres connection "master"
+[0m16:33:50.427033 [debug] [MainThread]: On master: BEGIN
+[0m16:33:50.428158 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m16:33:50.428583 [debug] [MainThread]: On master: COMMIT
+[0m16:33:50.428988 [debug] [MainThread]: Using postgres connection "master"
+[0m16:33:50.429365 [debug] [MainThread]: On master: COMMIT
+[0m16:33:50.430082 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m16:33:50.430496 [debug] [MainThread]: On master: Close
+[0m16:33:50.431250 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:33:50.431687 [info ] [MainThread]: 
+[0m16:33:50.439993 [debug] [Thread-1 (]: Began running node model.jaffle_shop.my_first_dbt_model
+[0m16:33:50.440663 [info ] [Thread-1 (]: 1 of 2 START sql table model raw.my_first_dbt_model ............................ [RUN]
+[0m16:33:50.441502 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_jaffle_shop_raw, now model.jaffle_shop.my_first_dbt_model)
+[0m16:33:50.442059 [debug] [Thread-1 (]: Began compiling node model.jaffle_shop.my_first_dbt_model
+[0m16:33:50.451623 [debug] [Thread-1 (]: Writing injected SQL for node "model.jaffle_shop.my_first_dbt_model"
+[0m16:33:50.453955 [debug] [Thread-1 (]: Timing info for model.jaffle_shop.my_first_dbt_model (compile): 16:33:50.442418 => 16:33:50.453605
+[0m16:33:50.454485 [debug] [Thread-1 (]: Began executing node model.jaffle_shop.my_first_dbt_model
+[0m16:33:50.498666 [debug] [Thread-1 (]: Writing runtime sql for node "model.jaffle_shop.my_first_dbt_model"
+[0m16:33:50.500977 [debug] [Thread-1 (]: Using postgres connection "model.jaffle_shop.my_first_dbt_model"
+[0m16:33:50.501489 [debug] [Thread-1 (]: On model.jaffle_shop.my_first_dbt_model: BEGIN
+[0m16:33:50.501963 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:33:50.514801 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m16:33:50.515428 [debug] [Thread-1 (]: Using postgres connection "model.jaffle_shop.my_first_dbt_model"
+[0m16:33:50.515967 [debug] [Thread-1 (]: On model.jaffle_shop.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.my_first_dbt_model"} */
+
+  
+    
+
+  create  table "jaffle_shop"."raw"."my_first_dbt_model__dbt_tmp"
+  
+  
+    as
+  
+  (
+    /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+  );
+  
+[0m16:33:50.518050 [debug] [Thread-1 (]: SQL status: SELECT 2 in 0.0 seconds
+[0m16:33:50.524904 [debug] [Thread-1 (]: Using postgres connection "model.jaffle_shop.my_first_dbt_model"
+[0m16:33:50.525429 [debug] [Thread-1 (]: On model.jaffle_shop.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.my_first_dbt_model"} */
+alter table "jaffle_shop"."raw"."my_first_dbt_model__dbt_tmp" rename to "my_first_dbt_model"
+[0m16:33:50.526493 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m16:33:50.544171 [debug] [Thread-1 (]: On model.jaffle_shop.my_first_dbt_model: COMMIT
+[0m16:33:50.544743 [debug] [Thread-1 (]: Using postgres connection "model.jaffle_shop.my_first_dbt_model"
+[0m16:33:50.545172 [debug] [Thread-1 (]: On model.jaffle_shop.my_first_dbt_model: COMMIT
+[0m16:33:50.546930 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m16:33:50.554126 [debug] [Thread-1 (]: Applying DROP to: "jaffle_shop"."raw"."my_first_dbt_model__dbt_backup"
+[0m16:33:50.558547 [debug] [Thread-1 (]: Using postgres connection "model.jaffle_shop.my_first_dbt_model"
+[0m16:33:50.558998 [debug] [Thread-1 (]: On model.jaffle_shop.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.my_first_dbt_model"} */
+drop table if exists "jaffle_shop"."raw"."my_first_dbt_model__dbt_backup" cascade
+[0m16:33:50.560040 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m16:33:50.561624 [debug] [Thread-1 (]: Timing info for model.jaffle_shop.my_first_dbt_model (execute): 16:33:50.454798 => 16:33:50.561286
+[0m16:33:50.562087 [debug] [Thread-1 (]: On model.jaffle_shop.my_first_dbt_model: Close
+[0m16:33:50.562966 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b092a0e4-f326-47e7-85f0-e74f5b514a15', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a8fd240>]}
+[0m16:33:50.563609 [info ] [Thread-1 (]: 1 of 2 OK created sql table model raw.my_first_dbt_model ....................... [[32mSELECT 2[0m in 0.12s]
+[0m16:33:50.564381 [debug] [Thread-1 (]: Finished running node model.jaffle_shop.my_first_dbt_model
+[0m16:33:50.565281 [debug] [Thread-1 (]: Began running node model.jaffle_shop.my_second_dbt_model
+[0m16:33:50.565964 [info ] [Thread-1 (]: 2 of 2 START sql view model raw.my_second_dbt_model ............................ [RUN]
+[0m16:33:50.566875 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.jaffle_shop.my_first_dbt_model, now model.jaffle_shop.my_second_dbt_model)
+[0m16:33:50.567440 [debug] [Thread-1 (]: Began compiling node model.jaffle_shop.my_second_dbt_model
+[0m16:33:50.570958 [debug] [Thread-1 (]: Writing injected SQL for node "model.jaffle_shop.my_second_dbt_model"
+[0m16:33:50.572335 [debug] [Thread-1 (]: Timing info for model.jaffle_shop.my_second_dbt_model (compile): 16:33:50.567741 => 16:33:50.572040
+[0m16:33:50.572808 [debug] [Thread-1 (]: Began executing node model.jaffle_shop.my_second_dbt_model
+[0m16:33:50.596127 [debug] [Thread-1 (]: Writing runtime sql for node "model.jaffle_shop.my_second_dbt_model"
+[0m16:33:50.597642 [debug] [Thread-1 (]: Using postgres connection "model.jaffle_shop.my_second_dbt_model"
+[0m16:33:50.598471 [debug] [Thread-1 (]: On model.jaffle_shop.my_second_dbt_model: BEGIN
+[0m16:33:50.599169 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:33:50.614237 [debug] [Thread-1 (]: SQL status: BEGIN in 0.0 seconds
+[0m16:33:50.614873 [debug] [Thread-1 (]: Using postgres connection "model.jaffle_shop.my_second_dbt_model"
+[0m16:33:50.615434 [debug] [Thread-1 (]: On model.jaffle_shop.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.my_second_dbt_model"} */
+
+  create view "jaffle_shop"."raw"."my_second_dbt_model__dbt_tmp"
+    
+    
+  as (
+    -- Use the `ref` function to select from other models
+
+select *
+from "jaffle_shop"."raw"."my_first_dbt_model"
+where id = 1
+  );
+[0m16:33:50.617737 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.0 seconds
+[0m16:33:50.621590 [debug] [Thread-1 (]: Using postgres connection "model.jaffle_shop.my_second_dbt_model"
+[0m16:33:50.622134 [debug] [Thread-1 (]: On model.jaffle_shop.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.my_second_dbt_model"} */
+alter table "jaffle_shop"."raw"."my_second_dbt_model__dbt_tmp" rename to "my_second_dbt_model"
+[0m16:33:50.623299 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m16:33:50.625306 [debug] [Thread-1 (]: On model.jaffle_shop.my_second_dbt_model: COMMIT
+[0m16:33:50.625811 [debug] [Thread-1 (]: Using postgres connection "model.jaffle_shop.my_second_dbt_model"
+[0m16:33:50.626305 [debug] [Thread-1 (]: On model.jaffle_shop.my_second_dbt_model: COMMIT
+[0m16:33:50.627789 [debug] [Thread-1 (]: SQL status: COMMIT in 0.0 seconds
+[0m16:33:50.631027 [debug] [Thread-1 (]: Applying DROP to: "jaffle_shop"."raw"."my_second_dbt_model__dbt_backup"
+[0m16:33:50.634208 [debug] [Thread-1 (]: Using postgres connection "model.jaffle_shop.my_second_dbt_model"
+[0m16:33:50.634730 [debug] [Thread-1 (]: On model.jaffle_shop.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.7.4", "profile_name": "jaffle_shop", "target_name": "dev", "node_id": "model.jaffle_shop.my_second_dbt_model"} */
+drop view if exists "jaffle_shop"."raw"."my_second_dbt_model__dbt_backup" cascade
+[0m16:33:50.635906 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.0 seconds
+[0m16:33:50.637639 [debug] [Thread-1 (]: Timing info for model.jaffle_shop.my_second_dbt_model (execute): 16:33:50.573144 => 16:33:50.637358
+[0m16:33:50.638153 [debug] [Thread-1 (]: On model.jaffle_shop.my_second_dbt_model: Close
+[0m16:33:50.639042 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'b092a0e4-f326-47e7-85f0-e74f5b514a15', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a846860>]}
+[0m16:33:50.639785 [info ] [Thread-1 (]: 2 of 2 OK created sql view model raw.my_second_dbt_model ....................... [[32mCREATE VIEW[0m in 0.07s]
+[0m16:33:50.640590 [debug] [Thread-1 (]: Finished running node model.jaffle_shop.my_second_dbt_model
+[0m16:33:50.642085 [debug] [MainThread]: Using postgres connection "master"
+[0m16:33:50.642532 [debug] [MainThread]: On master: BEGIN
+[0m16:33:50.642945 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:33:50.659320 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m16:33:50.659903 [debug] [MainThread]: On master: COMMIT
+[0m16:33:50.660363 [debug] [MainThread]: Using postgres connection "master"
+[0m16:33:50.660790 [debug] [MainThread]: On master: COMMIT
+[0m16:33:50.661711 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m16:33:50.662194 [debug] [MainThread]: On master: Close
+[0m16:33:50.662988 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:33:50.663407 [debug] [MainThread]: Connection 'model.jaffle_shop.my_second_dbt_model' was properly closed.
+[0m16:33:50.663870 [info ] [MainThread]: 
+[0m16:33:50.664468 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 0.38 seconds (0.38s).
+[0m16:33:50.665602 [debug] [MainThread]: Command end result
+[0m16:33:50.684672 [info ] [MainThread]: 
+[0m16:33:50.685266 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:33:50.685729 [info ] [MainThread]: 
+[0m16:33:50.686219 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 TOTAL=2
+[0m16:33:50.688645 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.4282346, "process_user_time": 3.764595, "process_kernel_time": 0.360554, "process_mem_max_rss": "118370304", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m16:33:50.689737 [debug] [MainThread]: Command `dbt run` succeeded at 16:33:50.689434 after 2.43 seconds
+[0m16:33:50.690510 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10752f640>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109da95a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a96d600>]}
+[0m16:33:50.691118 [debug] [MainThread]: Flushing usage events

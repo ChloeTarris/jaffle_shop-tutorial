@@ -1,0 +1,13 @@
+jaffle_shop: # this needs to match the profile in your dbt_project.yml file
+    target: dev
+    outputs:
+        dev:
+            type: postgres
+            host: "{{ env_var('DW_DATA_PGHOST') }}"
+            port: "{{ env_var('DW_DATA_PGPORT') | int }}"
+            user: "{{ env_var('DW_DATA_PGUSER') }}"
+            password: "{{ env_var('DW_DATA_PGPASSWORD') }}"
+            dbname: "{{ env_var('DW_DATA_PGDATABASE') }}"
+            schema: raw
+            threads: 1
+            keepalives_idle: 60
